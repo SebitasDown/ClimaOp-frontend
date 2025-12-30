@@ -1,17 +1,61 @@
-# React + Vite
+# ClimaOP - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web para el monitoreo del clima en tiempo real, construida con React y Vite.
 
-Currently, two official plugins are available:
+**Despliegue:** [https://clima-op-frontend.vercel.app](https://clima-op-frontend.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Descripción
 
-## React Compiler
+ClimaOP permite a los usuarios agregar ciudades y visualizar su información climática actualizada. Esta es la interfaz de usuario (Frontend) que consume la API de ClimaOP.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Características
 
-## Expanding the ESLint configuration
+-   **Agregar Ciudades:** Formulario intuitivo para registrar nuevas ciudades.
+-   **Listado de Clima:** Visualización de las ciudades agregadas con sus datos meteorológicos.
+-   **Interfaz Moderna:** Diseño responsivo y amigable.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# ClimaOp-frontend
+## Tecnologías
+
+-   **[React](https://react.dev/)** - Biblioteca para construir interfaces de usuario.
+-   **[Vite](https://vitejs.dev/)** - Entorno de desarrollo rápido.
+-   **[Axios](https://axios-http.com/)** - Cliente HTTP para consumir la API.
+-   **CSS Modules** - Estilizado de componentes.
+
+## Instalación y Ejecución Local
+
+Para ejecutar este proyecto en tu máquina local, sigue estos pasos:
+
+1.  **Clonar el repositorio**
+
+    ```bash
+    git clone <URL_DEL_REPOSITORIO>
+    cd frontend-climaop
+    ```
+
+2.  **Instalar dependencias**
+
+    ```bash
+    npm install
+    ```
+
+3.  **Ejecutar servidor de desarrollo**
+
+    ```bash
+    npm run dev
+    ```
+
+    La aplicación estará disponible en `http://localhost:5173`.
+
+## Configuración de API
+
+El frontend está configurado para comunicarse con el servidor backend alojado en Render:
+`https://climaop.onrender.com`
+
+La configuración se encuentra en `src/services/api.js`.
+
+## Scripts Disponibles
+
+-   `npm run dev`: Inicia el servidor de desarrollo.
+-   `npm run build`: Construye la aplicación para producción.
+-   `npm run preview`: Previsualiza la build de producción localmente.
+-   `npm run lint`: Ejecuta el linter para verificar el código.
